@@ -1,6 +1,6 @@
 <template>
     <div class="six">
-        <div class="from" v-if="isUser">
+        <div class="from" v-if="isNewUser">
             <div class="logo ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0s"></div>
             <div class="title ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.5s">报名</div>
             <div class="title-bottom ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
@@ -29,7 +29,7 @@
             </div>
         </div>
         <transition name="fade">
-            <div class="qr-wrap" v-else ref="qrWrap" id="qrWrap">
+            <div class="qr-wrap" ref="qrWrap" id="qrWrap" v-if="!isNewUser"> 
                 <h2 class="title">入场凭证<span class="str">（妥善保管）</span></h2>
                 <div class="logoc"></div>
                 <div class="user-info">
@@ -101,18 +101,27 @@ export default {
   },
   data () {
       return {
-          isUser:true,
+          isNewUser:true,
           title:'报名',
           unitData:unitData,
           name:'',
           unit:'',
           mobile:'',
           qrSize:200,
-          qrText:'http://www.hndt.com'
+          qrText:'http://www.hndt.com/'
       }
   },
   created () {
       this.qrSize = 3.5 * parseInt(document.getElementsByTagName('html')[0].style.fontSize)
+      //模拟异步请求，判断openId是否为已报名用户
+    setTimeout(() => {
+        this.isNewUser = false
+        this.qrText ="http://www.baidu.com"
+        this.$nextTick(() => {
+
+        })
+    },2000)
+      
   },
   methods:{
         postUser() {

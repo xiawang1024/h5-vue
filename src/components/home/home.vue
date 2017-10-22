@@ -23,8 +23,8 @@
         </div>
     </div>
     <div class="up-icon"></div>
-    <div class="audio-wrap">
-      <audio src="" id="auido" style="display:none"></audio>
+    <div class="audio-wrap" @click="toggle" :class="isPlay ? '' : 'isPause'">
+      <audio src="http://www.hndt.com/h5/promotion/static/mp3/mp3.mp3" class="audio" id="audio" autoplay loop></audio>
     </div>
   </div>
 </template>
@@ -48,11 +48,15 @@ export default {
     Six,
     // Seven
   },
+  data () {
+    return {
+      isPlay:true,
+    }
+  },
   mounted() {
     setTimeout(() => {
       this.mySwiper = new Swiper('.swiper-container', {
           direction : 'vertical',
-        //   loop:true,
           onInit: function(swiper) {
               swiperAnimateCache(swiper);
               swiperAnimate(swiper);
@@ -61,13 +65,34 @@ export default {
               swiperAnimate(swiper);
           }
       })
-    })
+      this.audio = document.getElementById('audio')
+      document.addEventListener("touchstart", this._play(), false);
+    },20)
+  },
+  methods:{
+    _play() {
+        this.audio.play()
+    },
+    toggle() {
+        if(this.audio.paused){
+            this.audio.play()
+            this.isPlay = true
+        }else{
+            this.audio.pause()
+            this.isPlay = false
+        }
+    }
   }
 };
 </script>
 
 <style lang="stylus" scoped>
 @import '~common/stylus/mixin.styl'
+@keyframes rotate 
+    0%
+        transform rotate(0)
+    100%
+        transform rotate(360deg)
 @keyframes up 
     0%
         transform translate3d(0,0,0)
@@ -102,6 +127,22 @@ export default {
     background-size contain
     animation up 1.2s ease-in infinite 
     animation-delay 1.5s
+.audio-wrap
+    position absolute
+    z-index 102400
+    top 50px
+    right 50px
+    width 80px
+    height 80px
+    background url('./voice.svg') center center no-repeat
+    background-size 1rem auto
+    animation rotate 2.5s linear infinite
+    &.isPause
+        -webkit-animation-play-state paused
+        animation-play-state paused
+        animation none
+    .audio
+        display none
 </style>
 
 

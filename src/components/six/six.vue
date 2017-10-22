@@ -129,6 +129,7 @@ export default {
             }
             if(!this.checkPhone(this.mobile)) {
                 Toast.warn('请填写正确的手机号')
+                return 
             }
             Toast.success({
                 message:'提交成功，正在生成入场凭证',

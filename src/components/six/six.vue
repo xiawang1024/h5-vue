@@ -28,7 +28,7 @@
                 <button class="sub-btn ani" @click="postUser" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="2s">提交</button>
             </div>
         </div>
-        <div class="qr-wrap" v-else>
+        <div class="qr-wrap" v-else ref="qrWrap" id="qrWrap">
             <h2 class="title">入场凭证<span class="str">（妥善保管）</span></h2>
             <div class="logoc"></div>
             <div class="user-info">
@@ -114,10 +114,7 @@ export default {
   },
   methods:{
         postUser() {
-            this.isUser = false
-            this.$nextTick(() => {
 
-            })
             if(!this.name){
                 Toast.warn('请填写姓名')
                 return 
@@ -141,7 +138,10 @@ export default {
 
             })
             setTimeout(() => {
-                this.title = '入场凭证'
+                this.isUser = false
+                this.$nextTick(() => {
+
+                })
             },3000)
         },
         checkPhone(phone) { 

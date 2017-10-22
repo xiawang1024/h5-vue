@@ -129,7 +129,7 @@ export default {
                 Toast.warn('请填写手机号')
                 return 
             }
-            if(!this.checkPhone(this.mobile)) {
+            if(!this._checkPhone(this.mobile)) {
                 Toast.warn('请填写正确的手机号')
                 return 
             }
@@ -147,7 +147,13 @@ export default {
                 })
             },3000)
         },
-        checkPhone(phone) { 
+        _getQueryString(name) {
+            let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            let r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        },
+        _checkPhone(phone) { 
             if(!(/^1[34578]\d{9}$/.test(phone))){                 
                 return false; 
             }else{

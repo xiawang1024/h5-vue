@@ -28,25 +28,27 @@
                 <button class="sub-btn ani" @click="postUser" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="2s">提交</button>
             </div>
         </div>
-        <div class="qr-wrap" v-else ref="qrWrap" id="qrWrap">
-            <h2 class="title">入场凭证<span class="str">（妥善保管）</span></h2>
-            <div class="logoc"></div>
-            <div class="user-info">
-                <p class="item">
-                    <span class="tag">姓名：</span>
-                    <span class="text">1111</span>
-                </p>
-                <p class="item">
-                    <span class="tag">部门：</span>
-                    <span class="text">原电台</span>
-                </p>
-                <p class="item">
-                    <span class="tag">电话：</span>
-                    <span class="text">13619840984</span>
-                </p>
+        <transition name="fade">
+            <div class="qr-wrap" v-else ref="qrWrap" id="qrWrap">
+                <h2 class="title">入场凭证<span class="str">（妥善保管）</span></h2>
+                <div class="logoc"></div>
+                <div class="user-info">
+                    <p class="item">
+                        <span class="tag">姓名：</span>
+                        <span class="text">1111</span>
+                    </p>
+                    <p class="item">
+                        <span class="tag">部门：</span>
+                        <span class="text">原电台</span>
+                    </p>
+                    <p class="item">
+                        <span class="tag">电话：</span>
+                        <span class="text">13619840984</span>
+                    </p>
+                </div>
+                <qr-code class="qr" :text="qrText" :size="qrSize"></qr-code>
             </div>
-            <qr-code class="qr" :text="qrText" :size="qrSize"></qr-code>
-        </div>
+        </transition>
     </div>
 </template>
 

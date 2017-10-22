@@ -1,20 +1,20 @@
 <template>
   <div class="four">
-    <div class="logo"></div>
-    <div class="title"></div>
-    <div class="titlec"></div>
-    <div class="title-bottom"></div>
-    <div class="bt-1"></div>
-    <div class="bt-2"></div>
+    <div class="logo ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0s"></div>
+    <div class="title ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="1s" swiper-animate-delay="0.3s"></div>
+    <div class="titlec ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="1s" swiper-animate-delay="0.8s"></div>
+    <div class="title-bottom ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+    <div class="bt-1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s"></div>
+    <div class="bt-2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.0s"></div>
     <div class="avatar">
-      <img src="./person.png" alt="" class="img">
-      <p class="name">王毛路</p>
-      <p class="desc">北京航空航天大学电子工程博士</p>
+      <img src="./person.png" alt="" class="img ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.35s">
+      <p class="name ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.5s">王毛路</p>
+      <p class="desc ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.8s">北京航空航天大学电子工程博士</p>
     </div>
-    <div class="p1">
+    <div class="p1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">
 		现任工业与信息化部信息化推进联盟区块链实验室副主任、中国信息化推进联盟委员、中国互联网协会电子数据研究院研究员、中国上市公司协会信息委委员，数秦科技首席科学家，曾任职于中国证监会、中国上市公司协会，全国金融标准化委员会委员。
     </div>
-    <div class="p2">
+    <div class="p2 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
 		主要研究领域包括神经网络、机器学习、分工式计算、大数据结构与交易规则等。长期从事区块链理论、区块结构、通信标准、链上数据流与区块链应用等方面的研究。先后主持多个国家级科研项目发表多篇学术论文，出版著作《区块链与新经济：数字货币2.0时代》，正在参与区块链国家标准制定工作。在金融科技领域具有深厚的经验，曾起草一项国家金融行业标准、多项金融行业标准。曾获得证卷期货行业科技进步奖二等奖、三等奖各一次。
     </div>
   </div>

@@ -1,21 +1,21 @@
 <template>
   <div class="one">
-	  <div class="logo"></div>
-	  <div class="title"></div>
-	  <div class="titlec"></div>
-	  <div class="address"></div>
-	  <div class="bt-1"></div>
-	  <div class="bt-2"></div>
-	  <div class="bt-3"></div>
-	  <div class="bt-4"></div>
+	  <div class="logo ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0s"></div>
+	  <div class="title ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.7s"></div>
+	  <div class="titlec ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.2s"></div>
+	  <div class="address ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.7s"></div>
+	  <div class="bt-1 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1.2s"></div>
+	  <div class="bt-2 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1.2s"></div>
+	  <div class="bt-3 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.7s" swiper-animate-delay="1s"></div>
+	  <div class="bt-4 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.7s" swiper-animate-delay="0.7s"></div>
 	  <div class="middle">
-		  <div class="light"></div>
-		  <div class="border-2"></div>
-		  <div class="border-1"></div>
-		  <div class="text"></div>
+		  <div class="light ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="3s"></div>
+		  <div class="border-2 ani" swiper-animate-effect="wxRotate" swiper-animate-duration="2.2s" swiper-animate-delay="1s"></div>
+		  <div class="border-1 ani" swiper-animate-effect="wxRotatex" swiper-animate-duration="2.2s" swiper-animate-delay="1s"></div>
+		  <div class="text ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s"></div>
 	  </div>
-	  <div class="time"></div>
-	  <div class="address-detail"></div>
+	  <div class="time ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="1s" swiper-animate-delay="1.5s"></div>
+	  <div class="address-detail ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="1s" swiper-animate-delay="2s"></div>
   </div>
 </template>
 

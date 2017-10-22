@@ -1,13 +1,13 @@
 <template>
   <div class="two">
-    <div class="logo"></div>
-    <div class="title"></div>
-    <div class="titlec"></div>
-    <div class="title-bottom"></div>
-    <div class="map"></div>
-    <div class="bt-1"></div>
-    <div class="bt-2"></div>
-    <div class="text">
+    <div class="logo ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0s"></div>
+    <div class="title ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="1s" swiper-animate-delay="0.3s"></div>
+    <div class="titlec ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="1s" swiper-animate-delay="0.8s"></div>
+    <div class="title-bottom ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+    <div class="map ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+    <div class="bt-2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+    <div class="bt-1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.8s"></div>    
+    <div class="text ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
       本次区块链技术讲座将在河南广播大厦三楼举办，嘉宾将围绕“区块链开启价值互联时代”这一全球趋势主题，解答从概念到落地，从起源到未来，从部门监管运用到普通百姓生活，就技术研发，商业应用，产业战略等方面进行深入探讨，让区块链应用技术更快的落地于生产生活中更好的服务于各行各业，成为新经济的催化剂。
     </div>
   </div>

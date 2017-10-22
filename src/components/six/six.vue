@@ -1,19 +1,19 @@
 <template>
     <div class="six">
         <div class="from" v-if="isUser">
-            <div class="logo"></div>
-            <div class="title">{{title}}</div>
-            <div class="title-bottom"></div>
-            <div class="bt-1"></div>
-            <div class="bt-2"></div>
-            <div class="bt-3"></div>
-            <div class="bt-4"></div>
+            <div class="logo ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0s"></div>
+            <div class="title ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.5s">报名</div>
+            <div class="title-bottom ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+            <div class="bt-1 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="2.3s"></div>
+            <div class="bt-2 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="2.8s"></div>
+            <div class="bt-3 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.7s" swiper-animate-delay="2s"></div>
+            <div class="bt-4 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.7s" swiper-animate-delay="1.8s"></div>
             <div id="form">
-                <p class="item">
+                <p class="item ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.8s">
                     <span class="label">姓名</span>
                     <input type="text" class="ipt" v-model="name">
                 </p>
-                <p class="item">
+                <p class="item ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.2s">
                     <span class="label">部门</span>
                     <!-- <input type="text" class="ipt select" placeholder="请选择" readonly @click.prevent="unitSelect" v-model="unit"> -->
                     <select class="ipt select" v-model="unit">
@@ -21,11 +21,11 @@
                         <option :value="item.value" v-for="item in unitData" v-bind:key="item.id">{{item.value}}</option>
                     </select>
                 </p>
-                <p class="item">
+                <p class="item ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.6s">
                     <span class="label">电话</span>
                     <input type="tel" class="ipt" v-model="mobile">
                 </p>
-                <button class="sub-btn" @click="postUser">提交</button>
+                <button class="sub-btn ani" @click="postUser" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="2s">提交</button>
             </div>
         </div>
         <div class="qr-wrap" v-else>

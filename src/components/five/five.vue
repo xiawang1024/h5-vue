@@ -1,19 +1,19 @@
 <template>
   <div class="five">
-    <div class="logo"></div>
-    <div class="title"></div>
-    <div class="titlec"></div>
-    <div class="title-bottom"></div>
-    <div class="bt-1"></div>
-    <div class="bt-2"></div>
-    <div class="map"></div>
-    <div class="p1">
+    <div class="logo ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0s"></div>
+    <div class="title ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="1s" swiper-animate-delay="0.3s"></div>
+    <div class="titlec ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="1s" swiper-animate-delay="0.8s"></div>
+    <div class="title-bottom ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+    <div class="bt-1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s"></div>
+    <div class="bt-2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.0s"></div>
+    <div class="map ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+    <div class="p1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">
 		地址：郑州金水区纬一路2号广播大厦
     </div>
-    <div class="p2">
+    <div class="p2 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.4s">
 		电话：0371-68559111
     </div>
-	<div class="p3">
+	<div class="p3 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.8s">
 		邮箱：hndt659390000@126.com
 	</div>
   </div>

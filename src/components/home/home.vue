@@ -74,7 +74,7 @@ export default {
         opacity 0
     100%
         transform translate3d(0,-80px,0)    
-        opacity 0.7
+        opacity 0.5
 .swiper-container
 	position absolute
 	top 0

@@ -62,19 +62,34 @@ body
 	animation-fill-mode: both
 @keyframes wxRotate
   0%
-    transform: rotate(0) scale3d(1,1,1)
+    transform: rotate(0) 
     transform-origin 50% 50%
   50%
-    transform: rotate(180deg) scale3d(1.4,1.4,1.4)
+    transform: rotate(180deg) 
     transform-origin 50% 50%
   100%
-    transform: rotate(360deg) scale3d(1,1,1)
+    transform: rotate(360deg) 
     transform-origin 50% 50%
 .wxRotate
   animation-name: wxRotate
   animation-timing-function  linear
   transform-origin: 50% 50%
-  animation-iteration-count 2
+  animation-iteration-count 1
+@keyframes wxRotatex
+  0%
+    transform: rotate(0) 
+    transform-origin 50% 50%
+  50%
+    transform: rotate(-180deg) 
+    transform-origin 50% 50%
+  100%
+    transform: rotate(-360deg) 
+    transform-origin 50% 50%
+.wxRotatex
+  animation-name: wxRotatex
+  animation-timing-function  linear
+  transform-origin: 50% 50%
+  animation-iteration-count 1
 @keyframes wxStar
   0%
     transform translate3d(100%,-100%,0)

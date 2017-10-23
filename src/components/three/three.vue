@@ -11,7 +11,7 @@
       <p class="name ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">高航</p>
     </div>
     <div class="p1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.7s">
-		资深技术极客、区块链技术专家、科技金融专家、财税信息化专家、国内最早再区块链领域的创业者。
+		资深技术极客、区块链技术专家、科技金融专家、财税信息化专家、国内最早在区块链领域的创业者。
 	</div>
     <div class="p2 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.2s">
 		中国区块链应用研究中心常务理事及浙江分中心负责人，国家互联网金融安全技术专家委员会委员。杭州区块链技术与应用联合会发起人，2013年从事区块链和数字货币研究。曾出版《数字货币：比特币数据报告与操作指南》、《敏捷创新》、《区块链与新经济：数字货币2.0时代》等书。

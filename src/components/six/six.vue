@@ -35,15 +35,15 @@
                 <div class="user-info">
                     <p class="item">
                         <span class="tag">姓名：</span>
-                        <span class="text">1111</span>
+                        <span class="text">{{qrName}}</span>
                     </p>
                     <p class="item">
                         <span class="tag">部门：</span>
-                        <span class="text">原电台</span>
+                        <span class="text">{{qrUnit}}</span>
                     </p>
                     <p class="item">
                         <span class="tag">电话：</span>
-                        <span class="text">13619840984</span>
+                        <span class="text">{{qrMobile}}</span>
                     </p>
                 </div>
                 <qr-code class="qr" :text="qrText" :size="qrSize"></qr-code>
@@ -91,7 +91,8 @@ const unitData = [
         'id':'12','value':'其它'
     },
 ]
-import { postUserInfo } from '@/api/index'
+const qrPre = 'http://a.weixin.hndt.com/user/verify/'
+import { postUserInfo, checkOpenId } from '@/api/index'
 import Toast from 'v-toast'
 import QrCode from 'vue-qrcode-component'
 export default {
@@ -107,21 +108,38 @@ export default {
           name:'',
           unit:'',
           mobile:'',
+          openId:'',
           qrSize:200,
-          qrText:'http://www.hndt.com/'
+          qrText:'http://www.hndt.com/',
+          qrName:'',
+          qrUnit:'',
+          qrMobile:''
       }
   },
   created () {
       this.qrSize = 3.5 * parseInt(document.getElementsByTagName('html')[0].style.fontSize)
+      this.openId = this._getQueryString('openId')
+  },
+  mounted () {
       //模拟异步请求，判断openId是否为已报名用户
-    setTimeout(() => {
-        this.isNewUser = false
-        this.qrText ="http://www.baidu.com"
-        this.$nextTick(() => {
+      setTimeout(() => {
+          checkOpenId(this.openId).then((res) => {
+                let data = res.data
+                if(data.status == 1) {
+                    this.isNewUser = false
+                    this.qrName = data.data.name;
+                    this.qrUnit = data.data.company;
+                    this.qrMobile = data.data.mobile;
+                    this.qrText = qrPre + this.openId
+                    this.$nextTick(() => {
 
-        })
-    },2000)
-      
+                    })
+                }else{
+                    this.isNewUser = true
+                    Toast.warn('入场凭证生成失败！')
+                }
+          })
+      },20)
   },
   methods:{
         postUser() {
@@ -142,19 +160,29 @@ export default {
                 Toast.warn('请填写正确的手机号')
                 return 
             }
-            Toast.success({
-                message:'提交成功，正在生成入场凭证',
-                duration:5000
-            })
-            postUserInfo(this.name, this.unit, this.mobile).then(() => {
+            
+            postUserInfo(this.name, this.unit, this.mobile, this.openId).then((res) => {
+                let data = res.data
+                if(data.status == 1) {
+                    this.qrName = this.name;
+                    this.qrUnit = this.unit;
+                    this.qrMobile = this.mobile
+                    this.qrText = qrPre + this.openId
+                    Toast.success({
+                        message:'提交成功，正在生成入场凭证',
+                        duration:3000
+                    })
+                    setTimeout(() => {
+                        this.isNewUser = false
+                        this.$nextTick(() => {
 
+                        })
+                    },3000)
+                }else{
+                    Toast.error('报名失败，请重新提交！')
+                }
             })
-            setTimeout(() => {
-                this.isUser = false
-                this.$nextTick(() => {
-
-                })
-            },3000)
+            
         },
         _getQueryString(name) {
             let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");

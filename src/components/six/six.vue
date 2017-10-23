@@ -110,7 +110,7 @@ export default {
           mobile:'',
           openId:'',
           qrSize:200,
-          qrText:'http://www.hndt.com/',
+          qrText:'',
           qrName:'',
           qrUnit:'',
           qrMobile:''
@@ -136,7 +136,6 @@ export default {
                     })
                 }else{
                     this.isNewUser = true
-                    Toast.warn('入场凭证生成失败！')
                 }
           })
       },20)

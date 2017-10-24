@@ -6,14 +6,14 @@
     <div class="title-bottom ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
     <div class="bt-1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s"></div>
     <div class="bt-2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.0s"></div>
-    <div class="map ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></div>
+    <img class="map ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s"></img>
     <div class="p1 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="1s">
 		河南广播网
     </div>
     <div class="p2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.4s">
 		时间：2017-10-25日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下午15：00-17：30
     </div>
-  </div>
+   </div>
 </template>
 
 <script>

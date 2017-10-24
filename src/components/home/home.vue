@@ -20,6 +20,18 @@
             <div class="swiper-slide">
                 <six></six>
             </div>
+            <div class="swiper-slide">
+                <seven></Seven>
+            </div>
+            <div class="swiper-slide">
+                <eight></eight>
+            </div>
+            <div class="swiper-slide">
+                <nine></nine>
+            </div>
+            <div class="swiper-slide">
+                <ten></ten>
+            </div>
         </div>
     </div>
     <div class="up-icon"></div>
@@ -36,7 +48,11 @@ import Three from 'components/three/three'
 import Four from 'components/four/four'
 import Five from 'components/five/five'
 import Six from 'components/six/six'
-// import Seven from 'components/seven/seven'
+import Seven from 'components/seven/seven'
+import Eight from 'components/eight/eight'
+import Nine from 'components/nine/nine'
+import Ten from 'components/ten/ten'
+
 export default {
   name: "home",
   components:{
@@ -46,7 +62,10 @@ export default {
     Four,
     Five,
     Six,
-    // Seven
+    Seven,
+    Eight,
+    Nine,
+    Ten
   },
   data () {
     return {

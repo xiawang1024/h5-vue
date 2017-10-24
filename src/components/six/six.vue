@@ -178,8 +178,10 @@ export default {
                         })
                     },3000)
                 }else{
-                    Toast.error('报名失败，请重新提交！')
+                    Toast.error('报名失败，对应单位名额已满！')
                 }
+            }).catch(() => {
+                Toast.error('报名失败，请重新提交！')
             })
             
         },

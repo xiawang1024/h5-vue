@@ -25,7 +25,7 @@
                     <span class="label">电话</span>
                     <input type="tel" class="ipt" v-model="mobile">
                 </p>
-                <button class="sub-btn ani" @click="postUser" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="2s">提交</button>
+                <button class="sub-btn ani" @click="postUser" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="2s" :disabled="disabled">提交</button>
             </div>
         </div>
         <transition name="fade">
@@ -109,6 +109,7 @@ export default {
           unit:'',
           mobile:'',
           openId:'',
+          disabled:false,
           qrSize:200,
           qrText:'',
           qrName:'',
@@ -161,6 +162,7 @@ export default {
             }
             
             postUserInfo(this.name, this.unit, this.mobile, this.openId).then((res) => {
+                this.disabled = true;
                 let data = res.data
                 if(data.status == 1) {
                     this.qrName = this.name;
@@ -173,15 +175,19 @@ export default {
                     })
                     setTimeout(() => {
                         this.isNewUser = false
+                        this.disabled = false
                         this.$nextTick(() => {
 
                         })
                     },3000)
                 }else{
                     Toast.error('报名失败，对应单位名额已满！')
+                    this.disabled = false
                 }
+                
             }).catch(() => {
                 Toast.error('报名失败，请重新提交！')
+                this.disabled = false
             })
             
         },
